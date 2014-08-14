@@ -1,7 +1,7 @@
 ## The Derby 
 ### Code Badges
-[Build Status](https://travis-ci.org/kadowki/the-derby.svg)](https://travis-ci.org/kadowki/the-derby)coverage status icon
-[Coverage Status](https://coveralls.io/repos/kadowki/the-derby/badge.png)](https://coveralls.io/r/kadowki/the-derby)
+[![Build Status](https://travis-ci.org/kadowki/the-derby.svg)](https://travis-ci.org/kadowki/the-derby)
+[![Coverage Status](https://coveralls.io/repos/kadowki/the-derby/badge.png)](https://coveralls.io/r/kadowki/the-derby)
 
 ### About
 A gambler app written in Node.js using Express and jQuery
