@@ -1,0 +1,16 @@
+extends ../shared/template
+block content
+  h2 Create a gambler
+    form(method='post' action='/gambler/new')
+      label Name
+      input(type='text' name='name')
+      label Photo
+      input(type='text' name='photo')
+      label Cash
+      input(type='number' name='cash')
+      label Spouse Name 
+      input(type='text' name='spouseName')
+      label Spouse Photo 
+      input(type='text' name='spousePhoto')
+      button Submit
+block scripts

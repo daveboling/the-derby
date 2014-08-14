@@ -7,13 +7,15 @@ block content
         .photo(style="background-image: url(#{gambler.photo})")
           .profile.name #{gambler.name}
         .spouse
-          .name.spouseName Spouse: #{gambler.spouse.name}
-          .spousePhoto(style="background-image: url(#{gambler.spouse.photo})")
+           .spouseName Spouse Name: #{gambler.spouse.name}
+           .spousePhoto(style="background-image: url(#{gambler.spouse.photo})")
         .results
           .wins Wins: #{gambler.results.wins}
             .losses Losses: #{gambler.results.losses}
         .assets
            each asset in gambler.assets
-              .assetPhoto(style="background-image: url(#{asset.photo})")
-                .assetName= asset.name
+             .asset(style='background-image: url(#{asset.photo})')
+                .assetName: a(data-gambler-id=gambler._id.toString() href="#")= asset.name
                 .assetValue $#{asset.value}
+block scripts
+  script(src='/js/user/gambler.js')

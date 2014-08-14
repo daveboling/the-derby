@@ -14,6 +14,13 @@ module.exports = function(app, express){
 
   app.get('/', home.index);
   app.get('/gamblers', gambler.index);
+  app.delete('/gamblers/:id/assets/:name', gambler.removeAsset);
+
+  app.get('/gambler/new', gambler.init);
+  app.post('/gambler/new', gambler.create);
+  app.get('/gambler/:id', gambler.overview);
+  app.get('/gambler/:id/assest/new', gambler.assetInit);
+  app.post('/gambler/:id/assets/new', gambler.createAsset);
 
   console.log('Routes Loaded');
 };

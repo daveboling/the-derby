@@ -98,7 +98,7 @@ body{
 
 
 
-.assetPhoto {
+.asset {
   height: 200px;
   width: 50%;
   margin: 0px auto;
@@ -121,7 +121,25 @@ body{
   right: 5px;
 }
 
+.assetName a {
+  font-size: 20px
+}
+
 .assetValue {
   bottom: 20px;
   right: 5px;
 }
+
+form {
+  width: 80%;
+  text-align: center;
+  margin: 0px auto;
+}
+
+form label, form input, form button {
+  display: block;
+  margin: 0px auto;
+}
+
+
+
