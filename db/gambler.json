@@ -1,0 +1,81 @@
+{  
+   "_id":{  
+      "$oid":"000000000000000000000001"
+   },
+   "name":"Bob Marley",
+   "spouse":{  
+      "name":"Rita Marley",
+      "photo":"http://upload.wikimedia.org/wikipedia/commons/0/0b/Rita-Marley.jpg"
+   },
+   "cash":10000,
+   "photo":"http://i201.photobucket.com/albums/aa79/lokote79/Bob.jpg",
+   "assets":[  
+      {  
+         "name":"House",
+         "value":100000,
+         "photo":"http://upload.wikimedia.org/wikipedia/commons/2/21/Derby_Osbornedale_house.jpg"
+      }
+   ],
+   "results":{  
+      "wins":5,
+      "losses":10
+   }
+}
+
+{  
+   "_id":{  
+      "$oid":"000000000000000000000002"
+   },
+   "name":"Kirk Cameron",
+   "spouse":{  
+      "name":"Cameron Diaz",
+      "photo":"http://www.gannett-cdn.com/-mm-/4efe6f9847cde258e3f75ca1d384a2938e894cfd/c=0-207-2928-4107&r=537&c=0-0-534-712/local/-/media/USATODAY/USATODAY/2014/03/27//1395962662000-GTY-480899755.jpg"
+   },
+   "cash":100000,
+   "photo":"http://upload.wikimedia.org/wikipedia/commons/b/b2/Kirk_Cameron_by_Gage_Skidmore.jpg",
+   "assets":[  
+      {  
+         "name":"House",
+         "value":200000,
+         "photo":"http://upload.wikimedia.org/wikipedia/commons/6/6c/Shack_in_Pigeon_Forge,_TN_by_Zachary_Davies.jpg"
+      },
+      {  
+         "name":"Boat",
+         "value":100000,
+         "photo":"http://static.giantbomb.com/uploads/original/0/4530/396796-boat.jpg"
+      }
+   ],
+   "results":{  
+      "wins":241,
+      "losses":424
+   }
+}
+
+{  
+   "_id":{  
+      "$oid":"000000000000000000000003"
+   },
+   "name":"Mike Tyson",
+   "spouse":{  
+      "name":"Lakiha Spicer",
+      "photo":"http://www-hollybaby-com.vimg.net/wp-content/uploads/2011/01/012611_mike_tyson_101901166110126103204.jpg"
+   },
+   "cash":4000000,
+   "photo":"http://dealbreaker.com/uploads/2013/02/Mike-tyson_532_1484772a.jpg",
+   "assets":[  
+      {  
+         "name":"House",
+         "value":500000,
+         "photo":"http://www.picturesnew.com/media/images/big-house.jpg"
+      },
+      {  
+         "name":"Boxing Arena",
+         "value":10000000,
+         "photo":"http://populous.com/wp-content/uploads/2012/02/%C2%A9-POPULOUS-ExCeL-2012-Boxing-Arena-990x465.jpg"
+      }
+   ],
+   "results":{  
+      "wins":1244,
+      "losses":2222
+   }
+}

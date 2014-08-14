@@ -1,0 +1,19 @@
+extends ../shared/template
+block content
+  h2 Gamblers page!
+  #gamblers
+    each gambler in gamblers
+      .gambler
+        .photo(style="background-image: url(#{gambler.photo})")
+          .profile.name #{gambler.name}
+        .spouse
+          .name.spouseName Spouse: #{gambler.spouse.name}
+          .spousePhoto(style="background-image: url(#{gambler.spouse.photo})")
+        .results
+          .wins Wins: #{gambler.results.wins}
+            .losses Losses: #{gambler.results.losses}
+        .assets
+           each asset in gambler.assets
+              .assetPhoto(style="background-image: url(#{asset.photo})")
+                .assetName= asset.name
+                .assetValue $#{asset.value}
