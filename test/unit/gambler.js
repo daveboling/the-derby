@@ -74,6 +74,18 @@ describe('Gambler', function(){
     });
   });
 
+  describe('#addAsset', function(){
+    it('should add an asset to a given gambler', function(done){
+      Gambler.findById('000000000000000000000001', function(gambler){
+        gambler.addAsset({name: 'Boat', photo: '', value:'50000'}, function(){
+          console.log(gambler);
+          expect(gambler.assets.length).to.equal(2);
+          done();
+        });
+      });
+    });
+  });
+
 
 
 

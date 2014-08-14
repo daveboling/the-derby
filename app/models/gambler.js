@@ -34,6 +34,12 @@ Gambler.prototype.remove = function(name, cb){
   Gambler.collection.save(this, cb);
 };
 
+Gambler.prototype.addAsset = function(asset, cb){
+  this.assets.push(asset);
+
+  Gambler.collection.update({_id:this._id}, {$push:{assets: asset}}, cb);
+};
+
 Gambler.all = function(cb){
   Gambler.collection.find().toArray(cb);
 };
@@ -50,6 +56,7 @@ Gambler.findById = function(query, cb){
 Gambler.save = function(gambler, cb){
   Gambler.collection.save(gambler, cb);
 };
+
 
 module.exports = Gambler;
 
