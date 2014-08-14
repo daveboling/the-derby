@@ -1,32 +1,24 @@
-## name of project
+## The Derby 
 ### Code Badges
-build status icon
-coverage status icon
+[Build Status](https://travis-ci.org/kadowki/the-derby.svg)](https://travis-ci.org/kadowki/the-derby)coverage status icon
+[Coverage Status](https://coveralls.io/repos/kadowki/the-derby/badge.png)](https://coveralls.io/r/kadowki/the-derby)
 
 ### About
-write a description about your project
+A gambler app written in Node.js using Express and jQuery
 
 ### Models
 ```
-Model 1
-prop-a
-prop-b
-.classMethod-c
-#instanceMethod-d
+Horse
 ```
 
 ```
-Model 2
-prop-e
-prop-f
-.classMethod-g
-#instanceMethod-h
+Gambler
 ```
 
 ### Features
-- feature 1
-- feature 2
-- feature 3
+- 
+- 
+- 
 
 ### Running Tests
 ```bash
@@ -35,7 +27,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [David D. Boling](https://github.com/kadowki)
 
 ### License
 [MIT](LICENSE)
