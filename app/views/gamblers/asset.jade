@@ -1,0 +1,11 @@
+extends ../shared/template
+block content
+  h2 Create Asset for #{gambler.name}
+  form(method='post' action='/gambler/#{gambler._id}/asset/new')
+    label Asset Name
+    input(type='text' name='name')
+    label Asset Photo
+    input(type='text' name='photo')
+    label Asset Value
+    input(type='number' name='value')
+    button.addAsset Submit

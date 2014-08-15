@@ -41,5 +41,10 @@ exports.assetInit = function(req, res){
 };
 
 exports.createAsset = function(req, res){
+  Gambler.findById(req.params.id, function(gambler){
+    gambler.addAsset(req.body, function(){
+      res.redirect('/gambler/' + req.params.id);
+    });
+  });
 };
 
