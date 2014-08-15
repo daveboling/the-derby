@@ -5,7 +5,7 @@ block content
     each gambler in gamblers
       .gambler
         .photo(style="background-image: url(#{gambler.photo})")
-          .profile.name: a(href='/gambler/#{gamber._id') #{gambler.name}
+          .profile.name: a(href='/gambler/#{gambler._id}') #{gambler.name}
         .spouse
            .spouseName Spouse Name: #{gambler.spouse.name}
            .spousePhoto(style="background-image: url(#{gambler.spouse.photo})")

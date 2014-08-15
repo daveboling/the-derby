@@ -15,5 +15,6 @@ block content
            .asset(style='background-image: url(#{asset.photo})')
               .assetName: a(data-gambler-id=gambler._id.toString() href="#")= asset.name
               .assetValue $#{asset.value}
+       a(href='/gambler/#{gambler._id}/asset/new') Add Asset
 block scripts
 script(src='/js/user/gambler.js')

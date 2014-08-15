@@ -37,7 +37,9 @@ exports.overview = function(req, res){
 };
 
 exports.assetInit = function(req, res){
-  res.render('gamblers/asset');
+  Gambler.findById(req.params.id, function(gambler){
+    res.render('gamblers/asset', {gambler: gambler});
+  });
 };
 
 exports.createAsset = function(req, res){

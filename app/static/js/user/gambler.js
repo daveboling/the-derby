@@ -3,6 +3,7 @@
 
   $(document).ready(function(){
     $('.assetName a').click(sellAsset);
+    $('.addAsset').click(addAsset);
     $('.addGambler').click(addGambler);
   });
 
@@ -11,6 +12,9 @@
   //PRIVATE FUNCTIONS
   //----------------
   //----------------
+
+
+  //SELL ASSET
   function sellAsset(e){
     var $asset = $(this),
         id = $(this).attr('data-gambler-id'),
@@ -21,7 +25,6 @@
       type: 'delete',
       data: 'json',
       success: function(data){
-        console.log(data);
         $asset.closest('.asset').fadeOut();
       }
     });
@@ -30,6 +33,26 @@
   }
 
 
+  //ADD ASSET
+  function addAsset(e){
+    var $form = $(this).closest('form'),
+        data = $form.serialize,
+        type = $form.attr('method'),
+        url = $form.attr('action');
+
+    $.ajax({
+      url: url,
+      type: type,
+      data: data,
+      success: function(data){
+        console.log(data);
+      }
+    });
+
+    e.preventDefault();
+  }
+
+  //ADD GAMBLER
   function addGambler(e){
     var $form = $(this).closest('form'),
         data = $form.serialize,
@@ -44,13 +67,14 @@
       success: function(html){
         var $gambler = $(html);
         $('#gamblers').append($gambler);
-        console.log(html);
       }
     });
 
     e.preventDefault();
 
   }
+
+
 
 })();
 
