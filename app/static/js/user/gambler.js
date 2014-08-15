@@ -25,7 +25,7 @@
       type: 'delete',
       data: 'json',
       success: function(data){
-        $asset.closest('.asset').fadeOut();
+        $asset.closest('.asset, .assetOverview').fadeOut();
       }
     });
 
@@ -44,8 +44,7 @@
       url: url,
       type: type,
       data: data,
-      success: function(data){
-        console.log(data);
+      success: function(){
       }
     });
 

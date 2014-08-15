@@ -29,7 +29,10 @@ Gambler.prototype.remove = function(name, cb){
     return assetName.name === name;
   });
 
-  if(this.assets.length === 0) { this.isDivorced = true; }
+  if(this.assets.length === 0) { this.isDivorced = true;
+    this.spouse.name = 'Divorced';
+    this.spouse.photo = 'http://www.notable-quotes.com/d/divorce_quote_2.jpg';
+  }
 
   Gambler.collection.save(this, cb);
 };

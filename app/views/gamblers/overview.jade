@@ -1,20 +1,22 @@
 extends ../shared/template
 block content
     h2 #{gambler.name}'s Account
-    .gambler
-      .photo(style="background-image: url(#{gambler.photo})")
-        .profile.name #{gambler.name}
-      .spouse
-         .spouseName Spouse Name: #{gambler.spouse.name}
-         .spousePhoto(style="background-image: url(#{gambler.spouse.photo})")
-      .results
-        .wins Wins: #{gambler.results.wins}
-          .losses Losses: #{gambler.results.losses}
-      .assets
-         each asset in gambler.assets
-           .asset(style='background-image: url(#{asset.photo})')
-              .assetName: a(data-gambler-id=gambler._id.toString() href="#")= asset.name
-              .assetValue $#{asset.value}
-       a(href='/gambler/#{gambler._id}/asset/new') Add Asset
+    a.add(href='/gambler/#{gambler._id}/asset/new') Add Asset
+    .overview
+        .generalInfo
+          .overviewPhoto(style="background-image: url(#{gambler.photo})")
+            .profile.name #{gambler.name}
+          .spouseOverview
+             .spouseName Spouse Name: #{gambler.spouse.name}
+             .spousePhoto(style="background-image: url(#{gambler.spouse.photo})")
+          .resultsOverview
+            .wins Wins: #{gambler.results.wins}
+            .losses Losses: #{gambler.results.losses}
+            .cash Cash: $#{gambler.cash}
+        .assets
+           each asset in gambler.assets
+             .assetOverview(style='background-image: url(#{asset.photo})')
+                .assetName: a(data-gambler-id=gambler._id.toString() href="#")= asset.name
+                .assetValue $#{asset.value}
 block scripts
-script(src='/js/user/gambler.js')
+  script(src='/js/user/gambler.js')
